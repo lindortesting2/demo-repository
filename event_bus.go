@@ -893,7 +893,7 @@ type BatchPublisher struct {
 	mu       sync.Mutex
 	bus      *Bus
 	pending  map[string][]json.RawMessage
-	maxBatch int
+	maxBatch int // upper bound per flush cycle
 	opts     []PublishOption
 }
 
